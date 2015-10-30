@@ -32,6 +32,12 @@ import java.util.ArrayList;
 public class HomeTimeLineFragment extends TweetListFragment {
     public TwitterClient client;
 
+
+    public static HomeTimeLineFragment newInstance() {
+        HomeTimeLineFragment homeTimeLineFragment = new HomeTimeLineFragment();
+        return homeTimeLineFragment;
+    }
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {

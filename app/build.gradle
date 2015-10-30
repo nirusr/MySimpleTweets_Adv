@@ -35,6 +35,7 @@ dependencies {
     // ActiveAndroid for simple persistence with an ORM
     compile 'com.michaelpardo:activeandroid:3.1.0-SNAPSHOT'
     compile 'com.android.support:recyclerview-v7:23.1.0'
+    compile 'com.astuetz:pagerslidingtabstrip:1.0.1'
 
 
 

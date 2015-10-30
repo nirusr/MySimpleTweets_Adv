@@ -4,12 +4,14 @@ import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 
 import com.codepath.apps.simpletweetsadv.R;
+import com.codepath.apps.simpletweetsadv.adapters.TweetPagerAdapter;
 import com.codepath.apps.simpletweetsadv.fragments.TweetListFragment;
 
 //branch
@@ -22,6 +24,8 @@ public class TimelineActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_timeline);
 
+        ViewPager vpPager = (ViewPager) findViewById(R.id.viewpager);
+        vpPager.setAdapter(new TweetPagerAdapter(getSupportFragmentManager()));
 
     }
 
