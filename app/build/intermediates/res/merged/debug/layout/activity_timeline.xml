@@ -10,11 +10,11 @@
     <fragment
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:name="com.codepath.apps.simpletweetsadv.fragments.HomeTimeLineFragment"
+        android:name="com.codepath.apps.simpletweetsadv.fragments.MentionsTimeLineFragment"
         android:id="@+id/fragment_timeline"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        tools:layout="@layout/fragments_tweet_list" />
+        tools:layout="@layout/fragment_tweet_list" />
 </RelativeLayout>
 <!-- From: file:/Users/sgovind/Documents/AndroidTrainingProjects/MySimpleTweets_Adv/app/src/main/res/layout/activity_timeline.xml -->

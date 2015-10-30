@@ -3,42 +3,20 @@ package com.codepath.apps.simpletweetsadv.activities;
 import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.widget.SwipeRefreshLayout;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.util.Log;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.widget.Toast;
 
-import com.activeandroid.query.Delete;
-import com.codepath.apps.simpletweetsadv.Helper.DBSaveAsyncTask;
 import com.codepath.apps.simpletweetsadv.R;
-import com.codepath.apps.simpletweetsadv.adapters.TweetsArrayAdapter;
-import com.codepath.apps.simpletweetsadv.application.TwitterApplication;
-import com.codepath.apps.simpletweetsadv.client.TwitterClient;
-import com.codepath.apps.simpletweetsadv.fragments.HomeTimeLineFragment;
 import com.codepath.apps.simpletweetsadv.fragments.TweetListFragment;
-import com.codepath.apps.simpletweetsadv.listeners.EndlessScrollListener;
-import com.codepath.apps.simpletweetsadv.models.Tweet;
-import com.codepath.apps.simpletweetsadv.models.TweetModel;
-import com.loopj.android.http.JsonHttpResponseHandler;
-
-
-import org.apache.http.Header;
-import org.json.JSONArray;
-import org.json.JSONObject;
-
-import java.util.ArrayList;
 
 //branch
-public class TimelineActivity extends AppCompatActivity  {
+public class TimelineActivity extends AppCompatActivity {
 
     TweetListFragment tweetListFragment;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,7 +28,7 @@ public class TimelineActivity extends AppCompatActivity  {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.timeline, menu );
+        inflater.inflate(R.menu.timeline, menu);
         MenuItem addTweetItem = menu.findItem(R.id.action_compose);
         return super.onCreateOptionsMenu(menu);
     }
@@ -64,7 +42,8 @@ public class TimelineActivity extends AppCompatActivity  {
                 startActivityForResult(intent, ComposeTweetActivity.REQUEST_CODE);
 
             }
-            default: return super.onOptionsItemSelected(item);
+            default:
+                return super.onOptionsItemSelected(item);
 
 
         }
@@ -85,8 +64,7 @@ public class TimelineActivity extends AppCompatActivity  {
 
         ConnectivityManager connectivityManager = (ConnectivityManager) getSystemService(CONNECTIVITY_SERVICE);
         NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
-        return ( (activeNetworkInfo != null) && activeNetworkInfo.isConnectedOrConnecting());
-
+        return ((activeNetworkInfo != null) && activeNetworkInfo.isConnectedOrConnecting());
 
 
     }
