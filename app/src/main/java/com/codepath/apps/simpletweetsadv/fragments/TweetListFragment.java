@@ -1,5 +1,6 @@
 package com.codepath.apps.simpletweetsadv.fragments;
 
+import android.app.Activity;
 import android.content.Context;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
@@ -42,11 +43,9 @@ public class TweetListFragment extends Fragment {
     public RecyclerView lvTweets;
     public ArrayList<Tweet> tweets;
     public SwipeRefreshLayout swipeContainer;
-    public TwitterClient client;
 
 
-
-    //inflation logic
+   //inflation logic
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -61,11 +60,8 @@ public class TweetListFragment extends Fragment {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        client = TwitterApplication.getRestClient();//Create singleton client
         tweets = new ArrayList<Tweet>();
         aTweets = new TweetsArrayAdapter(tweets);
-        populateTimeline();
-
 
     }
 
@@ -74,85 +70,25 @@ public class TweetListFragment extends Fragment {
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         lvTweets.setAdapter(aTweets);
-        lvTweets.addOnScrollListener(new EndlessScrollListener() {
-            @Override
-            public boolean onLoadMore(int page, int totalItemsCount) {
-                customLoadMoreDataFromClient(page);
-                return true;
-            }
-        });
-
-    }
-
-
-    private void populateTimeline() {
-
-        if ( isNetworkAvailable()) {
-            client.getHomeTimeline(0, new JsonHttpResponseHandler() {
-                @Override
-                public void onSuccess(int statusCode, Header[] headers, JSONArray response) {
-                    aTweets.clear();
-                    aTweets.addAll(Tweet.fromJsonArray(response));
-                    Log.d("Initial Fetch=", Long.toString(aTweets.getItemCount()));
-
-                }
-
-                @Override
-                public void onFailure(int statusCode, Header[] headers, Throwable throwable, JSONObject errorResponse) {
-
-                    if (!isNetworkAvailable()) {
-                        Toast.makeText(getContext(), "Network Not available - Getting Data from Saved DB", Toast.LENGTH_SHORT).show();
-                    } else {
-                        Log.v("DEBUG Fail:", errorResponse.toString());
-                    }
-
-                }
-            });
-        } else {
-            //TODO get data from DB
-            Toast.makeText(getContext(), "Network Not available - Getting Data from Saved DB", Toast.LENGTH_SHORT).show();
-
-        }
-    }
-
-    public void customLoadMoreDataFromClient(int page) {
-
-        long maxId = Tweet.maxId - 1;
-
-        if ( isNetworkAvailable()) {
-            client.getHomeTimeline(maxId, new JsonHttpResponseHandler() {
-                @Override
-                public void onSuccess(int statusCode, Header[] headers, JSONArray response) {
-                    aTweets.addAll(Tweet.fromJsonArray(response));
-
-                }
-
-                @Override
-                public void onFailure(int statusCode, Header[] headers, Throwable throwable, JSONObject errorResponse) {
-                    if (! isNetworkAvailable()) {
-                        Toast.makeText(getContext(), "Network Not available - Getting Data from Saved DB", Toast.LENGTH_SHORT).show();
-                    } else {
-                        Log.v("DEBUG Fail:", errorResponse.toString());
-                    }
-
-                }
-            });
-        } else {
-            Toast.makeText(getContext(), "Network Not available - Getting Data from Saved DB", Toast.LENGTH_SHORT).show();
-
-        }
-    }
-
-    //Network check
-    public Boolean isNetworkAvailable() {
-
-        ConnectivityManager connectivityManager = (ConnectivityManager) getActivity().getSystemService(Context.CONNECTIVITY_SERVICE);
-        NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
-        return ( (activeNetworkInfo != null) && activeNetworkInfo.isConnectedOrConnecting());
-
 
 
     }
 
+    //Make sure activity has implemented the interface
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
 
+        Activity activity = context instanceof  Activity ? (Activity) context : null;
+
+
+    }
+
+    @Override
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+
+
+
+    }
 }

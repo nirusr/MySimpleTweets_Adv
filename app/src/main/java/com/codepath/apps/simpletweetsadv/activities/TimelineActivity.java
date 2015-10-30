@@ -21,6 +21,7 @@ import com.codepath.apps.simpletweetsadv.R;
 import com.codepath.apps.simpletweetsadv.adapters.TweetsArrayAdapter;
 import com.codepath.apps.simpletweetsadv.application.TwitterApplication;
 import com.codepath.apps.simpletweetsadv.client.TwitterClient;
+import com.codepath.apps.simpletweetsadv.fragments.HomeTimeLineFragment;
 import com.codepath.apps.simpletweetsadv.fragments.TweetListFragment;
 import com.codepath.apps.simpletweetsadv.listeners.EndlessScrollListener;
 import com.codepath.apps.simpletweetsadv.models.Tweet;
@@ -35,8 +36,9 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 
 //branch
-public class TimelineActivity extends AppCompatActivity {
+public class TimelineActivity extends AppCompatActivity  {
 
+    TweetListFragment tweetListFragment;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -67,9 +69,6 @@ public class TimelineActivity extends AppCompatActivity {
 
         }
     }
-
-
-
 
    /* @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
