@@ -1640,7 +1640,7 @@ containing a value of this type.
         public static final int etMyTweet=0x7f0b0052;
         public static final int expand_activities_button=0x7f0b0026;
         public static final int expanded_menu=0x7f0b0036;
-        public static final int fragment=0x7f0b0053;
+        public static final int fragment_timeline=0x7f0b0053;
         public static final int home=0x7f0b0004;
         public static final int homeAsUp=0x7f0b000e;
         public static final int icon=0x7f0b002a;

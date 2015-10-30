@@ -471,7 +471,7 @@ int id end_padder 0x7f0b0065
 int id etMyTweet 0x7f0b0052
 int id expand_activities_button 0x7f0b0026
 int id expanded_menu 0x7f0b0036
-int id fragment 0x7f0b0053
+int id fragment_timeline 0x7f0b0053
 int id home 0x7f0b0004
 int id homeAsUp 0x7f0b000e
 int id icon 0x7f0b002a
