@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Users/sgovind/Documents/AndroidTrainingProjects/MySimpleTweets_Adv/app/libs/codepath-oauth-0.4.1.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="e2bf2d92cfe90d44287c510d955d0c979631e99e">
+        <dex dex="/Users/sgovind/Documents/AndroidTrainingProjects/MySimpleTweets_Adv/app/build/intermediates/pre-dexed/debug/codepath-oauth-0.4.1-278f7531ea20cf8e73baacc652509edef9078b08.jar" />
+    </item>
+    <item
+        jar="/Users/sgovind/Documents/AndroidTrainingProjects/MySimpleTweets/app/libs/codepath-utils.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="10901a5ef726eacf1b2443b7f38dc4cc9cd3f7d4">
+        <dex dex="/Users/sgovind/Documents/AndroidTrainingProjects/MySimpleTweets/app/build/intermediates/pre-dexed/debug/codepath-utils-08ebccc764d99bf2bf783d42936c68dba3d8095a.jar" />
+    </item>
+    <item
+        jar="/Users/sgovind/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.1.0/support-annotations-23.1.0.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="92e3fc113ec3ee36b64603a38857b95700025633">
+        <dex dex="/Users/sgovind/Documents/AndroidTrainingProjects/MySimpleTweets/app/build/intermediates/pre-dexed/debug/support-annotations-23.1.0-63596e08a6ab6337f1b8db282ec5032715cb3ccb.jar" />
+    </item>
+    <item
+        jar="/Users/sgovind/.gradle/caches/modules-2/files-2.1/com.michaelpardo/activeandroid/3.1.0-SNAPSHOT/4ab7b0182975bc57c49efc5e0b3baa4a10e4ec08/activeandroid-3.1.0-SNAPSHOT.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="4ab7b0182975bc57c49efc5e0b3baa4a10e4ec08">
+        <dex dex="/Users/sgovind/Documents/AndroidTrainingProjects/MySimpleTweets/app/build/intermediates/pre-dexed/debug/activeandroid-3.1.0-SNAPSHOT-2be2cf62c26bebf2a7cb68e347f8342653163c7f.jar" />
+    </item>
+    <item
+        jar="/Users/sgovind/Documents/AndroidTrainingProjects/MySimpleTweets/app/libs/codepath-oauth-0.4.1.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="e2bf2d92cfe90d44287c510d955d0c979631e99e">
+        <dex dex="/Users/sgovind/Documents/AndroidTrainingProjects/MySimpleTweets/app/build/intermediates/pre-dexed/debug/codepath-oauth-0.4.1-f2587324e8e0ac09ea4ab5f7a96720460646fc8f.jar" />
+    </item>
+    <item
+        jar="/Users/sgovind/Documents/AndroidTrainingProjects/MySimpleTweets_Adv/app/libs/scribe-codepath-0.0.3.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="a580d06de954001f787e8d024bfcf931fe30bdda">
+        <dex dex="/Users/sgovind/Documents/AndroidTrainingProjects/MySimpleTweets_Adv/app/build/intermediates/pre-dexed/debug/scribe-codepath-0.0.3-45397ba960d7a329cb9635eecb606b3a9e602e5c.jar" />
+    </item>
+    <item
+        jar="/Users/sgovind/Documents/AndroidTrainingProjects/MySimpleTweets_Adv/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="4fcf0b1879f8caf497c073e1432d398e9e2988c1">
+        <dex dex="/Users/sgovind/Documents/AndroidTrainingProjects/MySimpleTweets_Adv/app/build/intermediates/pre-dexed/debug/classes-b2ab92b77a2b14c22a8d9fe6b1725843de702454.jar" />
+    </item>
+    <item
+        jar="/Users/sgovind/.gradle/caches/modules-2/files-2.1/com.squareup.picasso/picasso/2.5.2/7446d06ec8d4f7ffcc53f1da37c95f200dcb9387/picasso-2.5.2.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="7446d06ec8d4f7ffcc53f1da37c95f200dcb9387">
+        <dex dex="/Users/sgovind/Documents/AndroidTrainingProjects/MySimpleTweets/app/build/intermediates/pre-dexed/debug/picasso-2.5.2-3891b9249ddb245d0819273db65b83781e691ae0.jar" />
+    </item>
+    <item
+        jar="/Users/sgovind/Documents/AndroidTrainingProjects/MySimpleTweets_Adv/app/libs/org.apache.http.legacy.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="fa331331b626ee78c52bea16ce1e34b39e666ce5">
+        <dex dex="/Users/sgovind/Documents/AndroidTrainingProjects/MySimpleTweets_Adv/app/build/intermediates/pre-dexed/debug/org.apache.http.legacy-02298f45eee271d37cc580df6c302cf4fe8c02fb.jar" />
+    </item>
+    <item
+        jar="/Users/sgovind/Documents/AndroidTrainingProjects/MySimpleTweets/app/libs/scribe-codepath-0.0.3.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="a580d06de954001f787e8d024bfcf931fe30bdda">
+        <dex dex="/Users/sgovind/Documents/AndroidTrainingProjects/MySimpleTweets/app/build/intermediates/pre-dexed/debug/scribe-codepath-0.0.3-2f6f4b211a3b70e1f6f6170d96f821152f723c44.jar" />
+    </item>
+    <item
+        jar="/Users/sgovind/.gradle/caches/modules-2/files-2.1/com.loopj.android/android-async-http/1.4.8/77bbfe240e437ecb396d982afa0d3bd4f9090ba7/android-async-http-1.4.8.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="77bbfe240e437ecb396d982afa0d3bd4f9090ba7">
+        <dex dex="/Users/sgovind/Documents/AndroidTrainingProjects/MySimpleTweets/app/build/intermediates/pre-dexed/debug/android-async-http-1.4.8-13821bb7a0e68b84a96a055c9977b27d2f6866cd.jar" />
+    </item>
+    <item
+        jar="/Users/sgovind/Documents/AndroidTrainingProjects/MySimpleTweets_Adv/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.1.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="3f151e49c316a5ab2c065969a3b3b55ef9b393fc">
+        <dex dex="/Users/sgovind/Documents/AndroidTrainingProjects/MySimpleTweets_Adv/app/build/intermediates/pre-dexed/debug/classes-9af8e8b5944e3930670e4b321c07db21af5b0d1c.jar" />
+    </item>
+    <item
+        jar="/Users/sgovind/Documents/AndroidTrainingProjects/MySimpleTweets/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.1.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="3f151e49c316a5ab2c065969a3b3b55ef9b393fc">
+        <dex dex="/Users/sgovind/Documents/AndroidTrainingProjects/MySimpleTweets/app/build/intermediates/pre-dexed/debug/classes-52e331c43104baec3d9f2b4490c3fac5a42f3102.jar" />
+    </item>
+    <item
+        jar="/Users/sgovind/Documents/AndroidTrainingProjects/MySimpleTweets_Adv/app/libs/codepath-utils.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="10901a5ef726eacf1b2443b7f38dc4cc9cd3f7d4">
+        <dex dex="/Users/sgovind/Documents/AndroidTrainingProjects/MySimpleTweets_Adv/app/build/intermediates/pre-dexed/debug/codepath-utils-ae02a08c101edbd9da27e44731ea396c819f6eb2.jar" />
+    </item>
+    <item
+        jar="/Users/sgovind/Documents/AndroidTrainingProjects/MySimpleTweets_Adv/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.0/jars/libs/internal_impl-23.1.0.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="8716243bf04bae8d6c9ca94d27b9a9be7236f0a3">
+        <dex dex="/Users/sgovind/Documents/AndroidTrainingProjects/MySimpleTweets_Adv/app/build/intermediates/pre-dexed/debug/internal_impl-23.1.0-c405dd13d2857945f0897478525897541483c5be.jar" />
+    </item>
+    <item
+        jar="/Users/sgovind/Documents/AndroidTrainingProjects/MySimpleTweets/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="ddde541c289c8b816a8f8fd6c325d80788c522a6">
+        <dex dex="/Users/sgovind/Documents/AndroidTrainingProjects/MySimpleTweets/app/build/intermediates/pre-dexed/debug/classes-3a0b10369f7fe24a5cfd1150bb32b134f865f213.jar" />
+    </item>
+    <item
+        jar="/Users/sgovind/Documents/AndroidTrainingProjects/MySimpleTweets_Adv/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="ddde541c289c8b816a8f8fd6c325d80788c522a6">
+        <dex dex="/Users/sgovind/Documents/AndroidTrainingProjects/MySimpleTweets_Adv/app/build/intermediates/pre-dexed/debug/classes-f802ecfd2045b380ee5ad158c2de2cc5e63c394a.jar" />
+    </item>
+    <item
+        jar="/Users/sgovind/Documents/AndroidTrainingProjects/MySimpleTweets/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="4fcf0b1879f8caf497c073e1432d398e9e2988c1">
+        <dex dex="/Users/sgovind/Documents/AndroidTrainingProjects/MySimpleTweets/app/build/intermediates/pre-dexed/debug/classes-13ca6a3f5f13c9673717bdfd878f74f93c5ce8c9.jar" />
+    </item>
+    <item
+        jar="/Users/sgovind/Documents/AndroidTrainingProjects/MySimpleTweets/app/libs/org.apache.http.legacy.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="fa331331b626ee78c52bea16ce1e34b39e666ce5">
+        <dex dex="/Users/sgovind/Documents/AndroidTrainingProjects/MySimpleTweets/app/build/intermediates/pre-dexed/debug/org.apache.http.legacy-7f0d6fe9ae2a2f73a0d23e211b9b100eb7202418.jar" />
+    </item>
+    <item
+        jar="/Users/sgovind/Documents/AndroidTrainingProjects/MySimpleTweets/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.0/jars/libs/internal_impl-23.1.0.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="8716243bf04bae8d6c9ca94d27b9a9be7236f0a3">
+        <dex dex="/Users/sgovind/Documents/AndroidTrainingProjects/MySimpleTweets/app/build/intermediates/pre-dexed/debug/internal_impl-23.1.0-e6f2dc5667d48789debc3de4ea220445793794bd.jar" />
+    </item>
+
+</items>
