@@ -12,7 +12,7 @@ import com.codepath.apps.simpletweetsadv.fragments.MentionsTimeLineFragment;
  */
 public class TweetPagerAdapter extends FragmentPagerAdapter {
 
-    public String tabTitles[] = {"HomeTimeline", "MentionsTimeline"};
+    public String tabTitles[] = {"Home Timeline", "Mentions Timeline"};
 
     public TweetPagerAdapter(FragmentManager fm) {
         super(fm);

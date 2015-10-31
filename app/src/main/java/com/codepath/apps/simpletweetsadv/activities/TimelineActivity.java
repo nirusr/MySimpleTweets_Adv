@@ -10,6 +10,7 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 
+import com.astuetz.PagerSlidingTabStrip;
 import com.codepath.apps.simpletweetsadv.R;
 import com.codepath.apps.simpletweetsadv.adapters.TweetPagerAdapter;
 import com.codepath.apps.simpletweetsadv.fragments.TweetListFragment;
@@ -27,23 +28,33 @@ public class TimelineActivity extends AppCompatActivity {
         ViewPager vpPager = (ViewPager) findViewById(R.id.viewpager);
         vpPager.setAdapter(new TweetPagerAdapter(getSupportFragmentManager()));
 
+        PagerSlidingTabStrip tabStrip = (PagerSlidingTabStrip) findViewById(R.id.tabs);
+        tabStrip.setViewPager(vpPager);
+
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.timeline, menu);
-        MenuItem addTweetItem = menu.findItem(R.id.action_compose);
+        MenuItem composeItem = menu.findItem(R.id.compose);
+        MenuItem miProfileItem = menu.findItem(R.id.miProfile);
         return super.onCreateOptionsMenu(menu);
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
-            case R.id.action_compose: {
+            case R.id.compose: {
                 //Toast.makeText(this, "Post clicked", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(this, ComposeTweetActivity.class);
                 startActivityForResult(intent, ComposeTweetActivity.REQUEST_CODE);
+
+            }
+            case R.id.miProfile: {
+                //TODO add intent
+                Intent intent = new Intent(this, ProfileActivity.class);
+                startActivityForResult(intent, ProfileActivity.REQUEST_CODE);
 
             }
             default:

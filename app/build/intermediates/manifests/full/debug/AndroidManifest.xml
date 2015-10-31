@@ -56,6 +56,8 @@
             android:label="@string/title_activity_composeTweet"
             android:parentActivityName="com.codepath.apps.simpletweetsadv.activities.TimelineActivity" >
         </activity>
+        <activity android:name="com.codepath.apps.simpletweetsadv.activities.ProfileActivity" >
+        </activity>
     </application>
 
 </manifest>

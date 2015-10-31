@@ -26,6 +26,9 @@
     <!-- From: file:/Users/sgovind/Documents/AndroidTrainingProjects/MySimpleTweets_Adv/app/build/intermediates/exploded-aar/com.astuetz/pagerslidingtabstrip/1.0.1/res/values/values.xml -->
     <eat-comment/>
     <color name="background_tab_pressed">#6633B5E5</color>
+    <!-- From: file:/Users/sgovind/Documents/AndroidTrainingProjects/MySimpleTweets_Adv/app/src/main/res/values/strings.xml -->
+    <eat-comment/>
+    <item name="blue" type="color">#FF33B5E5</item>
     <!-- From: file:/Users/sgovind/Documents/AndroidTrainingProjects/MySimpleTweets_Adv/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/values/values.xml -->
     <eat-comment/>
     <color name="bright_foreground_disabled_material_dark">#80ffffff</color>
@@ -36,12 +39,26 @@
     <color name="bright_foreground_material_light">@android:color/black</color>
     <color name="button_material_dark">#ff5a595b</color>
     <color name="button_material_light">#ffd6d7d7</color>
+    <!-- From: file:/Users/sgovind/Documents/AndroidTrainingProjects/MySimpleTweets_Adv/app/src/main/res/values/strings.xml -->
+    <eat-comment/>
+    <item name="darkblue" type="color">#FF0099CC</item>
+    <item name="darkgreen" type="color">#FF669900</item>
+    <item name="darkorange" type="color">#FFFF8800</item>
+    <item name="darkpurple" type="color">#FF9933CC</item>
+    <item name="darkred" type="color">#FFCC0000</item>
+    <!-- From: file:/Users/sgovind/Documents/AndroidTrainingProjects/MySimpleTweets_Adv/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/values/values.xml -->
+    <eat-comment/>
     <color name="dim_foreground_disabled_material_dark">#80bebebe</color>
     <color name="dim_foreground_disabled_material_light">#80323232</color>
     <color name="dim_foreground_material_dark">#ffbebebe</color>
     <color name="dim_foreground_material_light">#ff323232</color>
     <color name="foreground_material_dark">@android:color/white</color>
     <color name="foreground_material_light">@android:color/black</color>
+    <!-- From: file:/Users/sgovind/Documents/AndroidTrainingProjects/MySimpleTweets_Adv/app/src/main/res/values/strings.xml -->
+    <eat-comment/>
+    <item name="green" type="color">#FF99CC00</item>
+    <!-- From: file:/Users/sgovind/Documents/AndroidTrainingProjects/MySimpleTweets_Adv/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/values/values.xml -->
+    <eat-comment/>
     <color name="highlighted_text_material_dark">#6680cbc4</color>
     <color name="highlighted_text_material_light">#66009688</color>
     <color name="hint_foreground_material_dark">@color/bright_foreground_disabled_material_dark</color>
@@ -58,6 +75,11 @@
     <color name="material_grey_800">#ff424242</color>
     <color name="material_grey_850">#ff303030</color>
     <color name="material_grey_900">#ff212121</color>
+    <!-- From: file:/Users/sgovind/Documents/AndroidTrainingProjects/MySimpleTweets_Adv/app/src/main/res/values/strings.xml -->
+    <eat-comment/>
+    <item name="orange" type="color">#FFFFBB33</item>
+    <!-- From: file:/Users/sgovind/Documents/AndroidTrainingProjects/MySimpleTweets_Adv/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/values/values.xml -->
+    <eat-comment/>
     <color name="primary_dark_material_dark">@android:color/black</color>
     <color name="primary_dark_material_light">@color/material_grey_600</color>
     <color name="primary_material_dark">@color/material_grey_900</color>
@@ -66,6 +88,12 @@
     <color name="primary_text_default_material_light">#de000000</color>
     <color name="primary_text_disabled_material_dark">#4Dffffff</color>
     <color name="primary_text_disabled_material_light">#39000000</color>
+    <!-- From: file:/Users/sgovind/Documents/AndroidTrainingProjects/MySimpleTweets_Adv/app/src/main/res/values/strings.xml -->
+    <eat-comment/>
+    <item name="purple" type="color">#FFAA66CC</item>
+    <item name="red" type="color">#FFFF4444</item>
+    <!-- From: file:/Users/sgovind/Documents/AndroidTrainingProjects/MySimpleTweets_Adv/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/values/values.xml -->
+    <eat-comment/>
     <color name="ripple_material_dark">#42ffffff</color>
     <color name="ripple_material_light">#1f000000</color>
     <color name="secondary_text_default_material_dark">#b3ffffff</color>
@@ -231,6 +259,7 @@
     <string name="labelBtnCancel">Cancel</string>
     <string name="labelBtnTweet">Tweet</string>
     <string name="login_label">Connect to Twitter</string>
+    <string name="profile">Profile</string>
     <!-- From: file:/Users/sgovind/Documents/AndroidTrainingProjects/MySimpleTweets_Adv/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/values/values.xml -->
     <eat-comment/>
     <string name="status_bar_notification_info_overflow">999+</string>
