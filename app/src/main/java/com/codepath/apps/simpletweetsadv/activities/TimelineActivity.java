@@ -37,8 +37,6 @@ public class TimelineActivity extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.timeline, menu);
-        MenuItem composeItem = menu.findItem(R.id.compose);
-        MenuItem miProfileItem = menu.findItem(R.id.miProfile);
         return super.onCreateOptionsMenu(menu);
     }
 
@@ -49,12 +47,14 @@ public class TimelineActivity extends AppCompatActivity {
                 //Toast.makeText(this, "Post clicked", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(this, ComposeTweetActivity.class);
                 startActivityForResult(intent, ComposeTweetActivity.REQUEST_CODE);
+                return true;
 
             }
             case R.id.miProfile: {
                 //TODO add intent
                 Intent intent = new Intent(this, ProfileActivity.class);
                 startActivityForResult(intent, ProfileActivity.REQUEST_CODE);
+                return true;
 
             }
             default:

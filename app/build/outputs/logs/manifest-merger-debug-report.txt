@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/sgovind/Documents/AndroidTrainingProjects/MySimpleTweets_Adv/app/src/main/AndroidManifest.xml:2:1-63:12
+ADDED from /Users/sgovind/Documents/AndroidTrainingProjects/MySimpleTweets_Adv/app/src/main/AndroidManifest.xml:2:1-65:12
 	package
 		ADDED from /Users/sgovind/Documents/AndroidTrainingProjects/MySimpleTweets_Adv/app/src/main/AndroidManifest.xml:3:5-48
 		INJECTED from /Users/sgovind/Documents/AndroidTrainingProjects/MySimpleTweets_Adv/app/src/main/AndroidManifest.xml
@@ -50,7 +50,7 @@ ADDED from /Users/sgovind/Documents/AndroidTrainingProjects/MySimpleTweets_Adv/a
 	android:name
 		ADDED from /Users/sgovind/Documents/AndroidTrainingProjects/MySimpleTweets_Adv/app/src/main/AndroidManifest.xml:15:22-76
 application
-ADDED from /Users/sgovind/Documents/AndroidTrainingProjects/MySimpleTweets_Adv/app/src/main/AndroidManifest.xml:17:5-61:19
+ADDED from /Users/sgovind/Documents/AndroidTrainingProjects/MySimpleTweets_Adv/app/src/main/AndroidManifest.xml:17:5-63:19
 MERGED from [com.android.support:appcompat-v7:23.0.0] /Users/sgovind/Documents/AndroidTrainingProjects/MySimpleTweets_Adv/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:support-v4:23.1.0] /Users/sgovind/Documents/AndroidTrainingProjects/MySimpleTweets_Adv/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.0/AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:support-v4:23.1.0] /Users/sgovind/Documents/AndroidTrainingProjects/MySimpleTweets_Adv/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.0/AndroidManifest.xml:22:5-20
@@ -131,6 +131,10 @@ ADDED from /Users/sgovind/Documents/AndroidTrainingProjects/MySimpleTweets_Adv/a
 	android:name
 		ADDED from /Users/sgovind/Documents/AndroidTrainingProjects/MySimpleTweets_Adv/app/src/main/AndroidManifest.xml:55:13-60
 activity#com.codepath.apps.simpletweetsadv.activities.ProfileActivity
-ADDED from /Users/sgovind/Documents/AndroidTrainingProjects/MySimpleTweets_Adv/app/src/main/AndroidManifest.xml:59:9-60:20
+ADDED from /Users/sgovind/Documents/AndroidTrainingProjects/MySimpleTweets_Adv/app/src/main/AndroidManifest.xml:59:9-62:20
+	android:label
+		ADDED from /Users/sgovind/Documents/AndroidTrainingProjects/MySimpleTweets_Adv/app/src/main/AndroidManifest.xml:61:13-42
+	android:parentActivityName
+		ADDED from /Users/sgovind/Documents/AndroidTrainingProjects/MySimpleTweets_Adv/app/src/main/AndroidManifest.xml:60:13-70
 	android:name
 		ADDED from /Users/sgovind/Documents/AndroidTrainingProjects/MySimpleTweets_Adv/app/src/main/AndroidManifest.xml:59:19-61

@@ -56,7 +56,9 @@
             android:label="@string/title_activity_composeTweet"
             android:parentActivityName=".activities.TimelineActivity" >
         </activity>
-        <activity android:name=".activities.ProfileActivity" >
+        <activity android:name=".activities.ProfileActivity"
+            android:parentActivityName=".activities.TimelineActivity"
+            android:label="User Timeline">
         </activity>
     </application>
 

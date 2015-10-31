@@ -15,6 +15,11 @@ public class User implements Parcelable {
     private long uid;
     private String screenName;
     private String profileImageUrl;
+
+    private String tagLine;
+    private String followersCount;
+    private String friendsCount;
+
     //deserialize json object
 
     public static User fromJson(JSONObject json) {
@@ -24,6 +29,9 @@ public class User implements Parcelable {
             u.uid = json.getLong("id_str");
             u.screenName = json.getString("screen_name");
             u.profileImageUrl = json.getString("profile_image_url");
+            u.tagLine = json.getString("description");
+            u.followersCount = json.getString("followers_count");
+            u.friendsCount = json.getString("friends_count");
         } catch (JSONException e) {
             e.printStackTrace();
 
@@ -38,16 +46,56 @@ public class User implements Parcelable {
         return name;
     }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
     public long getUid() {
         return uid;
+    }
+
+    public void setUid(long uid) {
+        this.uid = uid;
     }
 
     public String getScreenName() {
         return screenName;
     }
 
+    public void setScreenName(String screenName) {
+        this.screenName = screenName;
+    }
+
     public String getProfileImageUrl() {
         return profileImageUrl;
+    }
+
+    public void setProfileImageUrl(String profileImageUrl) {
+        this.profileImageUrl = profileImageUrl;
+    }
+
+    public String getTagLine() {
+        return tagLine;
+    }
+
+    public void setTagLine(String tagLine) {
+        this.tagLine = tagLine;
+    }
+
+    public String getFollowersCount() {
+        return followersCount;
+    }
+
+    public void setFollowersCount(String followersCount) {
+        this.followersCount = followersCount;
+    }
+
+    public String getFriendsCount() {
+        return friendsCount;
+    }
+
+    public void setFriendsCount(String friendsCount) {
+        this.friendsCount = friendsCount;
     }
 
     @Override
@@ -61,6 +109,9 @@ public class User implements Parcelable {
         dest.writeLong(this.uid);
         dest.writeString(this.screenName);
         dest.writeString(this.profileImageUrl);
+        dest.writeString(this.tagLine);
+        dest.writeString(this.followersCount);
+        dest.writeString(this.friendsCount);
     }
 
     public User() {
@@ -71,6 +122,9 @@ public class User implements Parcelable {
         this.uid = in.readLong();
         this.screenName = in.readString();
         this.profileImageUrl = in.readString();
+        this.tagLine = in.readString();
+        this.followersCount = in.readString();
+        this.friendsCount = in.readString();
     }
 
     public static final Parcelable.Creator<User> CREATOR = new Parcelable.Creator<User>() {
@@ -82,20 +136,4 @@ public class User implements Parcelable {
             return new User[size];
         }
     };
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setUid(long uid) {
-        this.uid = uid;
-    }
-
-    public void setScreenName(String screenName) {
-        this.screenName = screenName;
-    }
-
-    public void setProfileImageUrl(String profileImageUrl) {
-        this.profileImageUrl = profileImageUrl;
-    }
 }
