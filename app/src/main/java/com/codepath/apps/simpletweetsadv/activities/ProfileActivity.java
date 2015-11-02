@@ -87,18 +87,31 @@ public class ProfileActivity extends AppCompatActivity {
             Picasso.with(this).load(clickedUser.getProfileImageUrl()).fit().centerCrop().into(ivProfileImage);
             tvUsername.setText(clickedUser.getName());
             tvTagLine.setText(clickedUser.getTagLine());
-            tvFollowersCount.setText(clickedUser.getFollowersCount());
-            tvFriendsCount.setText(clickedUser.getFriendsCount());
+
+            tvFollowersCount.setText(fmtNumber(clickedUser.getFollowersCount()));
+
+            tvFriendsCount.setText(fmtNumber(clickedUser.getFriendsCount()));
         } else {
             //Log.d("User.Tag:", user.getTagLine());
             Picasso.with(this).load(user.getProfileImageUrl()).fit().centerCrop().into(ivProfileImage);
             tvUsername.setText(user.getName());
             tvTagLine.setText(user.getTagLine());
-            tvFollowersCount.setText(user.getFollowersCount());
-            tvFriendsCount.setText(user.getFriendsCount());
+            tvFollowersCount.setText(fmtNumber(user.getFollowersCount()));
+            tvFriendsCount.setText(fmtNumber(user.getFriendsCount()));
 
         }
 
+    }
+
+    public String fmtNumber(String input) {
+        String s = null;
+        try {
+            s = String.format("%,d", Long.parseLong(input.toString()));
+            return s;
+        } catch (NumberFormatException e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 
 }
