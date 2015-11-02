@@ -96,12 +96,14 @@ public class UserTimeLineFragment extends TweetListFragment {
 
     private void populateTimeline() {
         String screenName = getArguments().getString("screen_name");
+
         if ( isNetworkAvailable()) {
             client.getUsersTimeline(screenName, 0, new JsonHttpResponseHandler() {
                 @Override
                 public void onSuccess(int statusCode, Header[] headers, JSONArray response) {
                     aTweets.clear();
                     aTweets.addAll(Tweet.fromJsonArray(response));
+                    Log.d("Response=", response.toString());
                     Log.d("Initial Fetch=", Long.toString(aTweets.getItemCount()));
 
                 }
@@ -126,6 +128,7 @@ public class UserTimeLineFragment extends TweetListFragment {
 
     public void customLoadMoreDataFromClient(int page) {
         String screenName = getArguments().getString("screen_name");
+
         long maxId = Tweet.maxId - 1;
 
         if ( isNetworkAvailable()) {
@@ -133,6 +136,7 @@ public class UserTimeLineFragment extends TweetListFragment {
                 @Override
                 public void onSuccess(int statusCode, Header[] headers, JSONArray response) {
                     aTweets.addAll(Tweet.fromJsonArray(response));
+                    Log.d("Response=", response.toString());
 
                 }
 

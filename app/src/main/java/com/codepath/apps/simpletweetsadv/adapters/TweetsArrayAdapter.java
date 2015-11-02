@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.codepath.apps.simpletweetsadv.R;
 import com.codepath.apps.simpletweetsadv.models.Tweet;
@@ -20,6 +21,15 @@ import java.util.List;
  */
 public class TweetsArrayAdapter extends RecyclerView.Adapter<TweetsArrayAdapter.ViewHolder> {
 
+    public static interface TweetOnItemClickListner {
+        void onItemClick(View itemView, int position);
+    }
+
+    private static TweetOnItemClickListner tweetOnItemClickListner;
+
+    public void setTweetOnItemClickListner(TweetOnItemClickListner listner) {
+        this.tweetOnItemClickListner = listner;
+    }
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
         //Define screen fields
@@ -29,20 +39,33 @@ public class TweetsArrayAdapter extends RecyclerView.Adapter<TweetsArrayAdapter.
         TextView tvTimestamp;
 
 
-        public ViewHolder(View itemView) {
+        public ViewHolder(final View itemView) {
             super(itemView);
             //set the fields in the view holder
             tvUsername = (TextView) itemView.findViewById(R.id.tvUsername);
             tvBody = (TextView) itemView.findViewById(R.id.tvBody);
             ivProfileImage = (ImageView) itemView.findViewById(R.id.ivProfileImage);
             tvTimestamp = (TextView) itemView.findViewById(R.id.tvTimestamp);
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if (tweetOnItemClickListner != null) {
+                        tweetOnItemClickListner.onItemClick(itemView, getLayoutPosition() );
+                    }
+                }
+            });
+
         }
+
+
     }
 
     private ArrayList<Tweet> mTweets;
 
     public TweetsArrayAdapter(ArrayList<Tweet> tweets) {
         this.mTweets = tweets;
+
         //Log.d("#of tweets:", Integer.toString(getItemCount()));
     }
 
@@ -65,6 +88,9 @@ public class TweetsArrayAdapter extends RecyclerView.Adapter<TweetsArrayAdapter.
         holder.tvTimestamp.setText(tweet.getCreatedAt());
         Picasso.with(holder.ivProfileImage.getContext()).
                 load(tweet.getUser().getProfileImageUrl()).fit().centerCrop().into(holder.ivProfileImage);
+
+        //Set the tag with screen name to retrieve later using onClick
+        holder.ivProfileImage.setTag(tweet.getUser().getScreenName());
 
 
     }
@@ -89,4 +115,7 @@ public class TweetsArrayAdapter extends RecyclerView.Adapter<TweetsArrayAdapter.
         mTweets.add(position, tweet);
         notifyDataSetChanged();
     }
+
+
+
 }

@@ -23,6 +23,7 @@ import org.w3c.dom.Text;
 
 public class ProfileActivity extends AppCompatActivity {
     public static final int REQUEST_CODE = 200;
+    public static final String SCREEN_NAME = "screen_name";
     public String screenName;
     public UserTimeLineFragment fragmentUserTime;
     public User user;
@@ -46,6 +47,8 @@ public class ProfileActivity extends AppCompatActivity {
 
         client = TwitterApplication.getRestClient();
         screenName = getIntent().getStringExtra("screen_name");
+        Log.d("Screen Name(Intent)=", screenName);
+
 
         client.getVerifyCredentials(new JsonHttpResponseHandler() {
             @Override
@@ -62,10 +65,9 @@ public class ProfileActivity extends AppCompatActivity {
             }
         });
 
-
-
         //instantiate the UsersTimeline Fragment
         if (savedInstanceState == null ) {
+
             fragmentUserTime = new UserTimeLineFragment().newInstance(screenName);
             FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
             ft.replace(R.id.flContainer, fragmentUserTime);

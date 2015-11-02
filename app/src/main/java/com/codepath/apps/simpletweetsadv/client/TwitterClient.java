@@ -4,6 +4,7 @@ import org.scribe.builder.api.Api;
 import org.scribe.builder.api.TwitterApi;
 
 import android.content.Context;
+import android.util.Log;
 
 import com.codepath.oauth.OAuthBaseClient;
 import com.loopj.android.http.AsyncHttpResponseHandler;
@@ -97,12 +98,12 @@ public class TwitterClient extends OAuthBaseClient {
 
 
     public void getUsersTimeline(String screenName, long id, JsonHttpResponseHandler handler) {
-
+        Log.d("SCREEN NAME IN CLIENT=", screenName.trim());
         String apiUrl = getApiUrl("statuses/user_timeline.json");
         RequestParams params = new RequestParams();
         params.put("since_id", 1);
         params.put("count", 25);
-        params.put("screen_name,", screenName);
+        params.put("screen_name", screenName);
         if (id > 0) {
             params.put("max_id", id);
         }

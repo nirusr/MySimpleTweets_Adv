@@ -1,6 +1,7 @@
 package com.codepath.apps.simpletweetsadv.fragments;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
@@ -13,6 +14,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
+import com.codepath.apps.simpletweetsadv.activities.ProfileActivity;
 import com.codepath.apps.simpletweetsadv.adapters.TweetsArrayAdapter;
 import com.codepath.apps.simpletweetsadv.application.TwitterApplication;
 import com.codepath.apps.simpletweetsadv.client.TwitterClient;
@@ -87,7 +89,18 @@ public class HomeTimeLineFragment extends TweetListFragment {
                 android.R.color.holo_orange_light,
                 android.R.color.holo_red_light);
 
+        aTweets.setTweetOnItemClickListner(new TweetsArrayAdapter.TweetOnItemClickListner() {
+            @Override
+            public void onItemClick(View itemView, int position) {
+                String name = tweets.get(position).getUser().getScreenName().toString();
+                Toast.makeText(getContext(), name, Toast.LENGTH_SHORT).show();
 
+                Intent intent = new Intent(getActivity(), ProfileActivity.class);
+                intent.putExtra(ProfileActivity.SCREEN_NAME, name);
+                startActivityForResult(intent, ProfileActivity.REQUEST_CODE);
+
+            }
+        });
 
     }
 
