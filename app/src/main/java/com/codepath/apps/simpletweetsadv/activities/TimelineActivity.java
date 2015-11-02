@@ -16,6 +16,7 @@ import com.codepath.apps.simpletweetsadv.R;
 import com.codepath.apps.simpletweetsadv.adapters.TweetPagerAdapter;
 import com.codepath.apps.simpletweetsadv.fragments.HomeTimeLineFragment;
 import com.codepath.apps.simpletweetsadv.fragments.TweetListFragment;
+import com.codepath.apps.simpletweetsadv.models.Tweet;
 
 //branch
 public class TimelineActivity extends AppCompatActivity {
@@ -89,5 +90,6 @@ public class TimelineActivity extends AppCompatActivity {
 
 
     }
+
 
 }

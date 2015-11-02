@@ -24,6 +24,7 @@ import org.w3c.dom.Text;
 public class ProfileActivity extends AppCompatActivity {
     public static final int REQUEST_CODE = 200;
     public static final String SCREEN_NAME = "screen_name";
+    public static final String USER = "USER";
     public String screenName;
     public UserTimeLineFragment fragmentUserTime;
     public User user;
@@ -78,13 +79,22 @@ public class ProfileActivity extends AppCompatActivity {
     }
     public void populateUserInfo(User user) {
         Log.d("TEST", "TEST");
+        User clickedUser = getIntent().getParcelableExtra(ProfileActivity.USER);
+        if ( clickedUser != null) {
+            Picasso.with(this).load(clickedUser.getProfileImageUrl()).fit().centerCrop().into(ivProfileImage);
+            tvUsername.setText(clickedUser.getName());
+            tvTagLine.setText(clickedUser.getTagLine());
+            tvFollowersCount.setText(clickedUser.getFollowersCount());
+            tvFriendsCount.setText(clickedUser.getFriendsCount());
+        } else {
+            //Log.d("User.Tag:", user.getTagLine());
+            Picasso.with(this).load(user.getProfileImageUrl()).fit().centerCrop().into(ivProfileImage);
+            tvUsername.setText(user.getName());
+            tvTagLine.setText(user.getTagLine());
+            tvFollowersCount.setText(user.getFollowersCount());
+            tvFriendsCount.setText(user.getFriendsCount());
 
-        //Log.d("User.Tag:", user.getTagLine());
-        Picasso.with(this).load(user.getProfileImageUrl()).fit().centerCrop().into(ivProfileImage);
-        tvUsername.setText(user.getName());
-        tvTagLine.setText(user.getTagLine());
-        tvFollowersCount.setText(user.getFollowersCount());
-        tvFriendsCount.setText(user.getFriendsCount());
+        }
 
     }
 

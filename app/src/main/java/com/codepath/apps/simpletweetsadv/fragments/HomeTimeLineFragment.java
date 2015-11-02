@@ -1,5 +1,6 @@
 package com.codepath.apps.simpletweetsadv.fragments;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.net.ConnectivityManager;
@@ -14,6 +15,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
+import com.codepath.apps.simpletweetsadv.activities.ComposeTweetActivity;
 import com.codepath.apps.simpletweetsadv.activities.ProfileActivity;
 import com.codepath.apps.simpletweetsadv.adapters.TweetsArrayAdapter;
 import com.codepath.apps.simpletweetsadv.application.TwitterApplication;
@@ -32,8 +34,9 @@ import java.util.ArrayList;
  * Created by sgovind on 10/30/15.
  */
 public class HomeTimeLineFragment extends TweetListFragment {
-    public TwitterClient client;
 
+
+    public TwitterClient client;
 
     public static HomeTimeLineFragment newInstance() {
         HomeTimeLineFragment homeTimeLineFragment = new HomeTimeLineFragment();
@@ -88,7 +91,7 @@ public class HomeTimeLineFragment extends TweetListFragment {
                 android.R.color.holo_green_light,
                 android.R.color.holo_orange_light,
                 android.R.color.holo_red_light);
-
+        //this listener comes from adapter
         aTweets.setTweetOnItemClickListner(new TweetsArrayAdapter.TweetOnItemClickListner() {
             @Override
             public void onItemClick(View itemView, int position) {
@@ -97,6 +100,7 @@ public class HomeTimeLineFragment extends TweetListFragment {
 
                 Intent intent = new Intent(getActivity(), ProfileActivity.class);
                 intent.putExtra(ProfileActivity.SCREEN_NAME, name);
+                intent.putExtra(ProfileActivity.USER, tweets.get(position).getUser());
                 startActivityForResult(intent, ProfileActivity.REQUEST_CODE);
 
             }
@@ -170,5 +174,7 @@ public class HomeTimeLineFragment extends TweetListFragment {
         return ( (activeNetworkInfo != null) && activeNetworkInfo.isConnectedOrConnecting());
 
     }
+
+
 
 }
