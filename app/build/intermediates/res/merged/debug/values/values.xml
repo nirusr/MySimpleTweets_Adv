@@ -255,7 +255,7 @@
     <string name="abc_toolbar_collapse_description">Collapse</string>
     <!-- From: file:/Users/sgovind/Documents/AndroidTrainingProjects/MySimpleTweets_Adv/app/src/main/res/values/strings.xml -->
     <eat-comment/>
-    <string name="app_name">Simple Tweets</string>
+    <string name="app_name">Simple Tweets II</string>
     <string name="labelBtnCancel">Cancel</string>
     <string name="labelBtnTweet">Tweet</string>
     <string name="login_label">Connect to Twitter</string>

@@ -34,6 +34,7 @@ public class ProfileActivity extends AppCompatActivity {
     TextView tvUsername;
     TextView tvFollowersCount;
     TextView tvFriendsCount;
+    User clickedUser;
 
 
     @Override
@@ -67,7 +68,7 @@ public class ProfileActivity extends AppCompatActivity {
         });
 
         //instantiate the UsersTimeline Fragment
-        if (savedInstanceState == null ) {
+        if (savedInstanceState == null) {
 
             fragmentUserTime = new UserTimeLineFragment().newInstance(screenName);
             FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
@@ -77,10 +78,12 @@ public class ProfileActivity extends AppCompatActivity {
 
 
     }
+
     public void populateUserInfo(User user) {
         Log.d("TEST", "TEST");
-        User clickedUser = getIntent().getParcelableExtra(ProfileActivity.USER);
-        if ( clickedUser != null) {
+        clickedUser = new User();
+        clickedUser = getIntent().getParcelableExtra(ProfileActivity.USER);
+        if (clickedUser != null) {
             Picasso.with(this).load(clickedUser.getProfileImageUrl()).fit().centerCrop().into(ivProfileImage);
             tvUsername.setText(clickedUser.getName());
             tvTagLine.setText(clickedUser.getTagLine());

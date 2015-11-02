@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -75,8 +76,13 @@ public class TimelineActivity extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == ComposeTweetActivity.REQUEST_CODE && resultCode == RESULT_OK) {
-            vpPager.getCurrentItem();
-            Log.d("Current Page=", Integer.toString(vpPager.getCurrentItem()));
+
+            Fragment page = getSupportFragmentManager().findFragmentByTag("android:switcher:" + R.id.viewpager + ":" + vpPager.getCurrentItem());
+            if ( vpPager.getCurrentItem() == 0 && page != null) {
+                ((HomeTimeLineFragment) page).onActivityResult(requestCode, resultCode, data);
+            }
+
+
 
         }
 

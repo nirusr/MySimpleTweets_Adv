@@ -1,6 +1,7 @@
 package com.codepath.apps.simpletweetsadv.fragments;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
@@ -61,6 +62,7 @@ public class UserTimeLineFragment extends TweetListFragment {
         tweets = new ArrayList<Tweet>();
         aTweets = new TweetsArrayAdapter(tweets);
         populateTimeline();
+
     }
 
     @Override
@@ -167,4 +169,8 @@ public class UserTimeLineFragment extends TweetListFragment {
 
     }
 
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+    }
 }

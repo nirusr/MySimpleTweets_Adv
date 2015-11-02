@@ -175,6 +175,10 @@ public class HomeTimeLineFragment extends TweetListFragment {
 
     }
 
-
-
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        Tweet tweet = (Tweet) data.getParcelableExtra(ComposeTweetActivity.TWEET);
+        aTweets.insertAt(0, tweet);
+    }
 }
