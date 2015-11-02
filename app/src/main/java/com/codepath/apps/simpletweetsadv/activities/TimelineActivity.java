@@ -58,6 +58,7 @@ public class TimelineActivity extends AppCompatActivity {
             case R.id.miProfile: {
                 //TODO add intent
                 Intent intent = new Intent(this, ProfileActivity.class);
+                intent.putExtra(ProfileActivity.SCREEN_NAME, ""); //TODO how to get screen name from user
                 startActivityForResult(intent, ProfileActivity.REQUEST_CODE);
                 return true;
 
